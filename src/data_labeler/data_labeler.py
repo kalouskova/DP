@@ -50,9 +50,9 @@ def parse_input(opts, args):
         usage()
     else: 
         filename = args[0]
-        input_data = data_handler.read_file(filename)
+        dh = data_handler.DataHandler(filename, fs, seg_len)
 
-    return input_data, filename, fs, seg_len, seg_num
+    return dh, fs, seg_len, seg_num
 
 
 if __name__ == '__main__':
@@ -62,6 +62,6 @@ if __name__ == '__main__':
     except getopt.GetoptError:
         usage()
 
-    input_data, filename, fs, seg_len, seg_num = parse_input(opts, args)
-
-    gui.run(input_data, filename, fs, seg_len, seg_num)
+    dh, fs, seg_len, seg_num = parse_input(opts, args)
+    
+    gui.Application(dh, fs, seg_len, seg_num)

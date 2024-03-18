@@ -1,4 +1,4 @@
-"""Script handling GUI for manual ECG labeling"""
+"""PyQt5 based GUI classes for manual ECG labeling"""
 
 __author__      = "Veronika Kalouskova"
 __copyright__   = "Copyright 2024, FIT CVUT"
@@ -26,16 +26,15 @@ class MplCanvas(FigureCanvasQTAgg):
 
 class MainWindow(QtWidgets.QMainWindow):
 
-    def __init__(self, data, filename, fs, seg_len, seg_num):
-        super(MainWindow, self).__init__()
-        self.setWindowTitle(filename)
-
-        self.DATA = data['value']
+    def __init__(self, dh, fs, seg_len, seg_num):
+        self.dh = dh
+        self.DATA = self.dh.df_in['value']
         self.FS = fs
         self.SEG_LEN = seg_len
         self.seg_curr = seg_num
 
-        self.dh = data_handler.DataHandler(filename, len(self.DATA), self.FS, self.SEG_LEN)
+        super(MainWindow, self).__init__()
+        self.setWindowTitle(self.dh.FILE_IN)
         self.create_layout()
     
     #   Keypress eventhandler for navigating the ECG signal
@@ -148,9 +147,11 @@ class MainWindow(QtWidgets.QMainWindow):
             self.update_plot()
 
 
-#   Run application loop
-def run(input_data, filename, fs, seg_len, seg_num):
-    app = QtWidgets.QApplication(sys.argv)
-    win = MainWindow(input_data, filename, fs, seg_len, seg_num)
+class Application():
 
-    app.exec_()
+    #   Run application loop
+    def __init__(self, dh, fs, seg_len, seg_num):
+        app = QtWidgets.QApplication(sys.argv)
+        win = MainWindow(dh, fs, seg_len, seg_num)
+
+        app.exec_()
