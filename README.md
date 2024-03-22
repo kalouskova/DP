@@ -8,12 +8,14 @@ All of the raw ECG data files are located in this directory, the subdirectory /l
 
 ### /src/data_labeler
 
-The script and graphical user interface for manual data annotation are located in this directory. It can be run from the /src directory using the command __python3 data_labeler/data_labeler.py__.
+The script and graphical user interface for manual data labelling are located in this directory. The GUI can be run from the /src directory using the command __python3 data_labeler/data_labeler.py__.
 
 data_labeler.py [-l segment_length] [-f sampling_rate] [-s starting_segment] input_file
 * input_file (str)       - input file name, must be a .csv file located in the /data directory
 * segment_length (int)   - length of a single segment in seconds, defaults to 5 seconds
 * sampling_rate (int)    - sampling frequency of input file, defaults to 500 frames per second
 * starting_segment (int) - segment number to display, defaults to fist segment
+
+NOTE: Instead of using the GUI buttons for switching between samples and labelling one can opt to use keyboard shortcuts - left key and right key for switching and space key for toggling the artefact toggle button.
 
 
