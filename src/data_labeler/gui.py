@@ -10,10 +10,9 @@ import matplotlib as plt
 import numpy as np
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+
 from PyQt5 import QtWidgets, QtCore
 plt.use('Qt5Agg')
-
-import data_handler
 
 
 class MplCanvas(FigureCanvasQTAgg):
@@ -43,6 +42,8 @@ class MainWindow(QtWidgets.QMainWindow):
             self.on_next()
         elif event.key() == QtCore.Qt.Key_Left:
             self.on_prev()
+        elif event.key() == QtCore.Qt.Key_Space:
+            self.on_toggle()
         event.accept()
 
     #   Define layout elements
@@ -127,6 +128,13 @@ class MainWindow(QtWidgets.QMainWindow):
             self.radio_ok.setChecked(True)
         else:
             self.radio_artifact.setChecked(True)
+
+    #   Handle radio button space key keypress
+    def on_toggle(self):
+        if (self.radio_ok.isChecked()):
+            self.radio_artifact.setChecked(True)
+        elif (self.radio_artifact.isChecked()):
+            self.radio_ok.setChecked(True)
 
     #   Handle radio button keypress
     def on_click(self):
