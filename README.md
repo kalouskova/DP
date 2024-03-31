@@ -3,9 +3,9 @@
 
 ### /data
 All of the raw ECG data files are located in this directory. There is a separate numbered directory for each of the subjects, the subdirectory /labels contains files with manually labeled data.
-* The filename convention for the raw ECG data located in */data/XX* directory is\ 
+* The filename convention for the ECG data located in */data/XX* directory is  
 *XX_ELECTRODE-TYPE_ACTIVITY-TYPE.csv*
-* The filename convention for corresponding labeled ECG data located in /labels directory is\ *_XX_ELECTRODE-TYPE_ACTIVITY-TYPE_SEG-LEN.csv*
+* The filename convention for corresponding ECG data labels located in */data/XX/labels* directory is   *_XX_ELECTRODE-TYPE_ACTIVITY-TYPE_SEG-LEN.csv*
 
 __ELECTRODE-TYPE encoding:__
 * 01    - Ag/AgCl electrodes
@@ -22,7 +22,7 @@ __ACTIVITY-TYPE encoding:__
 
 ### /src/data_labeler
 
-The script and graphical user interface for manual data labelling are located in this directory. The GUI can be run from the /data_labeler directory using the command __python3 data_labeler.py__.
+The script and graphical user interface for manual data labelling are located in this directory. The GUI can be run from the */data_labeler* directory using the command __python3 data_labeler.py__.
 
 data_labeler.py [-l segment_length] [-f sampling_rate] [-s starting_segment] input_file
 * input_file (str)       - input file name, must be a .csv file located in the /data directory
