@@ -5,7 +5,8 @@
 All of the raw ECG data files are located in this directory. There is a separate numbered directory for each of the subjects, the subdirectory /labels contains files with manually labeled data.
 * The filename convention for the ECG data located in */data/XX* directory is  
 *XX_ELECTRODE-TYPE_ACTIVITY-TYPE.csv*
-* The filename convention for corresponding ECG data labels located in */data/XX/labels* directory is   *_XX_ELECTRODE-TYPE_ACTIVITY-TYPE_SEG-LEN.csv*
+* The filename convention for corresponding ECG data labels located in */data/XX/labels* directory is  
+*XX_ELECTRODE-TYPE_ACTIVITY-TYPE_SEG-LEN.csv*
 
 __ELECTRODE-TYPE encoding:__
 * 01    - Ag/AgCl electrodes
