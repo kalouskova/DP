@@ -3,8 +3,9 @@
 
 ### /data
 All of the raw ECG data files are located in this directory. There is a separate numbered directory for each of the subjects, the subdirectory /labels contains files with manually labeled data.
-* The filename convention for the raw ECG data located in /data/XX directory is XX_ACTIVITY-TYPE_ELECTRODE-TYPE.csv
-* The filename convention for corresponding labeled ECG data located in /labels directory is XX_ACTIVITY-TYPE_ELECTRODE-TYPE_SEG-LEN_labels.csv
+* The filename convention for the raw ECG data located in */data/XX* directory is\ 
+*XX_ELECTRODE-TYPE_ACTIVITY-TYPE.csv*
+* The filename convention for corresponding labeled ECG data located in /labels directory is\ *_XX_ELECTRODE-TYPE_ACTIVITY-TYPE_SEG-LEN.csv*
 
 __ELECTRODE-TYPE encoding:__
 * 01    - Ag/AgCl electrodes
@@ -29,6 +30,6 @@ data_labeler.py [-l segment_length] [-f sampling_rate] [-s starting_segment] inp
 * sampling_rate (int)    - sampling frequency of input file, defaults to 500 frames per second
 * starting_segment (int) - segment number to display, defaults to fist segment
 
-NOTE: Instead of using the GUI buttons for switching between samples and labelling one can opt to use keyboard shortcuts - left key and right key for switching and space key for toggling the artefact toggle button.
+__NOTE: *Instead of using the GUI buttons for switching between samples and labelling one can opt to use keyboard shortcuts - left key and right key for switching and space key for toggling the artefact toggle button.*__
 
 

@@ -143,7 +143,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.canvas.axes.plot(x, self.DATA[start:end], linewidth=0.8, color='red')
 
         title = 'ECG    SEGMENT ' + str(self.seg_curr + 1) + '/' + str(math.floor(len(self.DATA) / (self.SEG_LEN * self.FS)))
-        #self.canvas.axes.set_title(f"{title:<40}", x=0.17, y=0.90, color='blue', fontsize = 10)
         self.canvas.axes.text(0.01, 0.98, title, ha='left', va='top', color='blue', fontsize = 10, transform=self.canvas.axes.transAxes)
        
         self.canvas.axes.set_xlim((self.seg_curr * self.SEG_LEN, (self.seg_curr * self.SEG_LEN) + self.SEG_LEN))
