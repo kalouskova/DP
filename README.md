@@ -31,6 +31,8 @@ data_labeler.py [-l segment_length] [-f sampling_rate] [-s starting_segment] inp
 * sampling_rate (int)    - sampling frequency of input file, defaults to 500 frames per second
 * starting_segment (int) - segment number to display, defaults to fist segment
 
-__NOTE: *Instead of using the GUI buttons for switching between samples and labelling one can opt to use keyboard shortcuts - left key and right key for switching and space key for toggling the artefact toggle button.*__
+Labels automatically default to artefact present for all activities besides rest, which defaults to no artefact. There is no need to save the labels, the output .csv file is updated after each artefact button toggle.
+
+__NOTE: *Instead of using the GUI buttons for switching between samples and labelling one can opt to use keyboard shortcuts - left key and right key for switching, space key for toggling the artefact toggle button, enter key for leaving the application.*__
 
 

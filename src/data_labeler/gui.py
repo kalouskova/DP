@@ -53,6 +53,9 @@ class MainWindow(QtWidgets.QMainWindow):
             self.on_prev()
         elif event.key() == QtCore.Qt.Key_Space:
             self.on_toggle()
+        elif event.key() == QtCore.Qt.Key_Enter or event.key() == QtCore.Qt.Key_Return:
+            sys.exit()
+
         event.accept()
 
     #   Set layout styles
@@ -134,18 +137,20 @@ class MainWindow(QtWidgets.QMainWindow):
         # Clear the canvas
         self.canvas.axes.cla()  
 
-        # Plot new segment
-        seg_len_pts = self.SEG_LEN * self.FS
-        start = self.seg_curr * seg_len_pts
-        end = start + seg_len_pts
+        seg_len_pts = self.SEG_LEN * self.FS            # Length of a single segment in points
+        seg_start = self.seg_curr * self.SEG_LEN        # Start of current segment in seconds
+        
+        start = self.seg_curr * seg_len_pts             # Start of current segment in points
+        end = start + seg_len_pts                       # End of current segment in points
 
-        x = np.linspace(self.seg_curr * self.SEG_LEN, (self.seg_curr * self.SEG_LEN) + self.SEG_LEN, seg_len_pts)
+        # Plot new segment
+        x = np.linspace(seg_start, seg_start + self.SEG_LEN, seg_len_pts)
         self.canvas.axes.plot(x, self.DATA[start:end], linewidth=0.8, color='red')
 
-        title = 'ECG    SEGMENT ' + str(self.seg_curr + 1) + '/' + str(math.floor(len(self.DATA) / (self.SEG_LEN * self.FS)))
+        title = 'ECG    SEGMENT ' + str(self.seg_curr + 1) + '/' + str(math.floor(len(self.DATA) / seg_len_pts))
         self.canvas.axes.text(0.01, 0.98, title, ha='left', va='top', color='blue', fontsize = 10, transform=self.canvas.axes.transAxes)
        
-        self.canvas.axes.set_xlim((self.seg_curr * self.SEG_LEN, (self.seg_curr * self.SEG_LEN) + self.SEG_LEN))
+        self.canvas.axes.set_xlim((seg_start, seg_start + self.SEG_LEN))
         self.canvas.axes.set_ylim((min(self.DATA) - 1000, max(self.DATA) + 1000))
 
         # Trigger the canvas to update and redraw

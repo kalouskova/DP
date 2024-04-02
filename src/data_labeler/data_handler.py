@@ -17,42 +17,45 @@ class DataHandler():
         self.FILE_IN = '../../data/' + filename.split('_')[0] + '/' + filename
         self.FILE_OUT = labels_path + filename.split('.')[0] + '_' + str(seg_len) + '.csv'
 
-        self.df_in = self.read_file(filename)
+        self.df_in = self.read_file()
         self.load_data(fs, seg_len, labels_path)
 
     #   Load output .csv file if it exists, if not create a new dataframe
     def load_data(self, fs, seg_len, labels_path):
+        # If file exists, open it, if not, create a new one
         if os.path.exists(self.FILE_OUT):
             self.df_out = pd.read_csv(self.FILE_OUT, sep=';')
         else:
+            # Create directory for labels if not present
             if not os.path.exists(labels_path): 
                 os.makedirs(labels_path) 
+
             self.create_df(fs, seg_len)
             self.df_out.to_csv(self.FILE_OUT, sep=';', index=False)  
 
     #   Create output dataframe
     def create_df(self, fs, seg_len):
-            data_size = len(self.df_in['value'])
+        data_size = len(self.df_in['value'])
 
-            seg_len_pts = seg_len * fs
-            rows = math.floor(data_size / seg_len_pts)
+        seg_len_pts = seg_len * fs
+        rows = math.floor(data_size / seg_len_pts)
 
-            start = np.arange(0, data_size - seg_len_pts, seg_len_pts)
-            end = np.arange(seg_len_pts, data_size, seg_len_pts)
-            type, _ = self.get_activity_type()
+        start = np.arange(0, data_size - seg_len_pts + 1, seg_len_pts)
+        end = np.arange(seg_len_pts, data_size + 1, seg_len_pts)
+        type, _ = self.get_activity_type()
 
-            # Initialize pandas dataframe for output data
-            self.df_out = pd.DataFrame(index=range(rows), columns=['start', 'end', 'activity', 'artifact'])
+        # Initialize pandas dataframe for output data
+        self.df_out = pd.DataFrame(index=range(rows), columns=['start', 'end', 'activity', 'artifact'])
 
-            self.df_out['start'] = start
-            self.df_out['end'] = end
-            self.df_out['activity'] = type
+        self.df_out['start'] = start
+        self.df_out['end'] = end
+        self.df_out['activity'] = type
 
-            # Default values based on activity type - rest defaults to no artifact, other activities to artifact present
-            if (type == 0):
-                self.df_out['artifact'] = 0
-            else:
-                self.df_out['artifact'] = 1
+        # Default values based on activity type - rest defaults to no artifact, other activities to artifact present
+        if (type == 0):
+            self.df_out['artifact'] = 0
+        else:
+            self.df_out['artifact'] = 1
 
     #   Set value of artifact based on radio button selection
     def set_artifact(self, seg_curr, label):
@@ -97,7 +100,7 @@ class DataHandler():
             return 'Unknown'
 
     #   Read input .csv file, handle possible exceptions
-    def read_file(self, filename):
+    def read_file(self):
         try:
             input_data = pd.read_csv(self.FILE_IN, sep=';', names=['timestamp', 'value'])
         except FileNotFoundError:
