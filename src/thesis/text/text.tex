@@ -14,37 +14,7 @@
 \lipsum[4]
 
 %---------------------------------------------------------------
-\section{Vzory}
-%---------------------------------------------------------------
-
-%---------------------------------------------------------------
-\subsection{List}
-%---------------------------------------------------------------
-
-\begin{itemize}
-    \item Ut enim ad minim veniam, quis nostrud
-    \item Ut enim ad minim 
-    \begin{itemize}
-        \item Ut enim ad
-        \item Ut enim ad
-    \end{itemize}
-\end{itemize}
-
-%---------------------------------------------------------------
-\subsection{Číslovaný list}
-%---------------------------------------------------------------
-
-\begin{enumerate}
-    \item Ut enim ad minim veniam, quis nostrud
-    \item Ut enim ad minim 
-    \begin{enumerate}
-        \item Ut enim ad
-        \item Ut enim ad
-    \end{enumerate}
-\end{enumerate}
-
-%---------------------------------------------------------------
-\subsection{Kód}
+\section{Kód}
 %---------------------------------------------------------------
 
 \vspace{\baselineskip} 
@@ -58,42 +28,6 @@
         return 0;
     }
 \end{lstlisting}
-
-%---------------------------------------------------------------
-\subsection{Tabuľka}
-%---------------------------------------------------------------
-
-\begin{table}[h!]\centering
-\caption[Příklad tabulky]{~Zadávání matematiky}\label{tab:matematika}
-\begin{tabular}{l|l|c|c}
-	Typ		& Prostředí		& \LaTeX{}ovská zkratka	& \TeX{}ovská zkratka	\tabularnewline \hline 
- 	Text		& \verb|math|		& \verb|\(...\)|	& \verb|$...$|	\tabularnewline \hline
- 	Displayed	& \verb|displaymath|	& \verb|\[...\]|	& \verb|$$...$$|	\tabularnewline 
-\end{tabular}
-\end{table}
-
-\subsection{Dôkazy}
-
-\begin{definition}[Optional label]
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Aliquam id dolor. Curabitur bibendum justo non orci.
-\end{definition}
-
-\begin{example}
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Aliquam id dolor. Curabitur bibendum justo non orci.
-\end{example}
-
-\begin{theorem}
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Aliquam id dolor. Curabitur bibendum justo non orci.
-\end{theorem}
-
-\begin{proof}
-Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Aliquam id dolor. Curabitur bibendum justo non orci.
-\end{proof}
-
-\begin{corollary}
-Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Aliquam id dolor. Curabitur bibendum justo non orci.
-\end{corollary}
-
 
 
 
@@ -531,34 +465,67 @@ SVM je trieda modelov, ktorá sa najčastejšie používa na klasifikáciu dát.
 \end{minipage}
 \vspace{5pt}
 
-Castaño a spol.\cite{Castao2017} v svojej publikácii skúmajú klasifikáciu pomocou SVM do dvoch tried - normálne EKG a znečistené pohybovým artefaktom. Použité dáta boli získané v kontrolovanom experimente podobne ako naše, avšak skúmaná bola iba jedna pohybová aktivita a to pohyb hornými končatinami. Namerané dáta boli rozdelené na segmenty o dĺžke 1.2 sekundy, korešpondujúce s jedným úderom srdca. Skúšali SVM s lineárnym aj polynomiálnym jadrom, ale najlepšie výsledky dosiahli pomocou Gaussovského jadra. Kher a spol.\cite{Kher2015} riešia problém klasifikácie rôznych pohybových aktivít - pohyby hornými končatinami, rotácie v páse a chôdza. Ich prístup je však odlišný v tom, že na klasifikáciu pomocou SVM nepoužívajú nespracovaný EKG signál, ale z neho extrahované príznaky pomocou rôznych transformácií, ako napríklad vyššie spomínanej vlnkovej transformácie. Aj keď pomocou Gaussovského jadra dosiali presnosť 95\%, kvôli využitiu transformácií však táto metóda nie je vhodná na klasifikáciu v reálnom čase.
+Castaño a spol.\cite{Castao2017} v svojej publikácii skúmajú klasifikáciu pomocou SVM do dvoch tried - normálne EKG a znečistené pohybovým artefaktom. Použité dáta boli získané v riadenom experimente podobne ako naše, avšak skúmaná bola iba jedna pohybová aktivita a to pohyb hornými končatinami. Namerané dáta boli rozdelené na segmenty o dĺžke 1.2 sekundy, korešpondujúce s jedným úderom srdca. Skúšali SVM s lineárnym aj polynomiálnym jadrom, ale najlepšie výsledky dosiahli pomocou Gaussovského jadra. Kher a spol.\cite{Kher2015} riešia problém klasifikácie rôznych pohybových aktivít - pohyby hornými končatinami, rotácie v páse a chôdza. Ich prístup je však odlišný v tom, že na klasifikáciu pomocou SVM nepoužívajú nespracovaný EKG signál, ale z neho extrahované príznaky pomocou rôznych transformácií, ako napríklad vyššie spomínanej vlnkovej transformácie. Aj keď pomocou Gaussovského jadra dosiali presnosť 95\%, kvôli využitiu transformácií však táto metóda nie je vhodná na klasifikáciu v reálnom čase.
 
 
-%---------------------------------------------------------------
-\chapter{Popis experimentu}
-%---------------------------------------------------------------
 
 %---------------------------------------------------------------
-\section{Metodika experimentu}
+\chapter{Cieľ práce}
 %---------------------------------------------------------------
 
 TODO
+
+
+
+%---------------------------------------------------------------
+\chapter{Metodika experimentu}
+%---------------------------------------------------------------
+
+V tejto kapitole podrobne popíšeme priebeh riadeného experimentu uskutočneného so zámerom získania dát pre účely tejto práce. Taktiež popíšeme všetky potrebné zariadenia využité pri jednotlivých meraniach, ale aj vytvorené nástroje na vizualizáciu a kontrolu získaných EKG záznamov a ich následnú anotáciu. Cieľom experimentu bolo vyhotoviť dátovú sadu, vhodnú na použitie pri trénovaní a testovaní modelov umelej inteligencie, ktorých úlohou je detegovať pohybové artefakty s čo najväčšou presnosťou.
+
+
+%---------------------------------------------------------------
+\section{Popis subjektov}
+%---------------------------------------------------------------
+
+Keďže v tejto práci neanalyzujeme EKG zo zdravotného hľadiska, v dátach nepredpokladáme veľkú interpersonálnu variabilitu čo sa týka výskytu pohybových artefaktov. Preto boli subjekty vyberané náhodne a neboli stanovené žiadne podmienky na účasť, okrem zdravotnej spôsobilosti vykonávať jednotlivé úkony v experimente. Jediným obmedzením, ktoré bolo prirodzene splnené, bolo, aby boli jednotlivé subjekty v produktívnom veku, čo priamo vyplýva zo zamerania práce a využitia pre zásahové zložky. 
+
+Experimentu sa zúčastnilo 10 dobrovoľníkov, pričom XX z nich bolo ženského pohlavia a XX mužského. Vekové rozmedzie subjektov bolo XX - XX rokov. Priemerná váha bola XX\( \pm \)XX kg pre ženy a XX\( \pm \)XX kg pre mužov, priemerná výška XX\( \pm \)XX cm pre ženy a XX\( \pm \)XX cm pre mužov. Tieto hodnoty sú primerané jednotlivým pohlaviam, nenachádzajú sa v nich žiadne extrémy, rovnako aj fyzická kondícia jednotlivých subjektov bola primeraná ich veku. Priemerná hodnota obvodu hrudníka bola XX\( \pm \)XX cm pre ženy a XX\( \pm \)XX pre mužov. Ako sme očakávali, priemerná hodnota obvodu hrudníka u mužov je výrazne vyššia ako u žien. Táto informácia je dôležitá kvôli porovnaniu s najmenším možným nastavením obvodu hrudných pásov. Keďže pri monitorovaní pomocou plošných suchých a textilných elektród je kľúčové zabezpečenie dostatočného kontaktu elektród s kožou, nastavenie pásu môže byť limitujúce pre osoby s úzkym hrudníkom.
+
+\begin{table}[H]\centering
+\caption[Prehľad subjektov experimentu]{~Prehľad subjektov experimentu}\label{tab:subjects}
+    \begin{tabular}{c|c|c|c|c|c}
+    	\textbf{ID} & \textbf{Pohlavie} & \textbf{Vek} & \textbf{Výška (cm)} & \textbf{Váha (kg)} & \textbf{Obvod hrudníka (cm)} \tabularnewline \hline 
+     	01        	          &  M                & X            & X                   & X                  & X                            \tabularnewline \hline
+        02        	          &  M                & X            & X                   & X                  & X                            \tabularnewline \hline
+        03        	          &  Ž                & X            & X                   & X                  & X                            \tabularnewline \hline
+        04        	          &  M                & X            & X                   & X                  & X                            \tabularnewline \hline
+        05        	          &  Ž                & X            & X                   & X                  & X                            \tabularnewline \hline
+        06        	          &  Ž                & X            & X                   & X                  & X                            \tabularnewline \hline
+        07        	          &  M                & X            & X                   & X                  & X                            \tabularnewline \hline
+        08        	          &  M                & X            & X                   & X                  & X                            \tabularnewline \hline
+        09        	          &  X                & X            & X                   & X                  & X                            \tabularnewline \hline
+        10        	          &  X                & X            & X                   & X                  & X                            \tabularnewline
+    \end{tabular}
+\end{table}
+
 
 %---------------------------------------------------------------
 \section{Použitý hardware}
 %---------------------------------------------------------------
 
-TODO
+TODO    
+
 
 %---------------------------------------------------------------
 \section{Použitý software}
 %---------------------------------------------------------------
 
-TODO
-
 %---------------------------------------------------------------
 \subsection{Vizualizácia a záznam EKG}
 %---------------------------------------------------------------
+
+TODO
 
 \begin{figure}[H]
     \centering
@@ -571,7 +538,7 @@ TODO
 \subsection{Manuálna anotácia dát}
 %---------------------------------------------------------------
 
-Kvôli nutnosti manuálne anotovať namerané EKG dáta bolo na tento účel vytvorené jednoduché grafické rozhranie. Zdrojový kód je napísaný v programovacom jazyku \textbf{Python 3.0}, so staršími verziami nemusí byť kompatibilný. Užívateľské rozhranie bolo vytvorené pomocou \textbf{PyQt5}, ktoré poskytuje programátorské rozhranie medzi knižnicou na tvorbu grafických aplikácií Qt a jazykom Python. V tomto rozhraní je EKG krivka zobrazená na grafe vykreslenom pomocou knižnice \textbf{Matplotlib}. Kompletný zoznam knižníc potrebných na spustenie aplikácie je možné nájsť v zložke so zdrojovými kódmi v súbore \textit{requirements.txt}.
+Kvôli nutnosti manuálne anotovať namerané EKG dáta bolo vytvorené jednoduché grafické rozhranie. Okrem samotnej anotácie dát toto rozhranie slúži aj na zobrazenie a kontrolu nameraných dát z jednotlivých experimentov. Zdrojový kód je napísaný v programovacom jazyku \textbf{Python 3.0}, so staršími verziami nemusí byť kompatibilný. Užívateľské rozhranie bolo vytvorené pomocou \textbf{PyQt5}, ktoré poskytuje programátorské rozhranie medzi knižnicou na tvorbu grafických aplikácií Qt a jazykom Python. V tomto rozhraní je EKG krivka zobrazená na grafe vykreslenom pomocou knižnice \textbf{Matplotlib}. Kompletný zoznam knižníc potrebných na spustenie aplikácie je možné nájsť v zložke so zdrojovými kódmi v súbore \textit{requirements.txt}.
 
 \begin{figure}[H]
     \centering
@@ -580,7 +547,7 @@ Kvôli nutnosti manuálne anotovať namerané EKG dáta bolo na tento účel vyt
     \label{fig:SW_labels}
 \end{figure}
 
-Grafické rozhranie umožňuje navigáciu cez jednotlivé segmenty nameraného EKG signálu, pričom ich dĺžka je voliteľná. Na pohyb medzi jednotlivými segmentmi sa dajú použiť buď tlačidlá umiestnené pod oknom, v ktorom sa zobrazuje aktuálny segment, alebo pomocou ľavej a pravej šípky na klávesnici. V ľavom hornom rohu okna zobrazujúceho aktuálny segment sa nachádza číslo aktuálneho segmentu a ich celkový počet. V paneli na pravej strane okna sa nachádza typ pohybovej aktivity a použitých elektród, oboje sú odvodené od názvu súboru. V neposlednom rade sa tu nachádza aj prepínacie tlačidlo, ktorým sa anotuje daný segment ako obsahujúci artefakt, alebo čistý. Toto tlačidlo sa dá opäť ovládať priamo kliknutím, alebo sa dá na jeho prepínanie využiť medzerník na klávesnici. Pri otvorení vstupného súboru, ktorý chce používateľ anotovať, sa automaticky vytvorí výstupný \textit{.csv} súbor, rovnako sa pri zmene stavu prepínacieho tlačidla označujúceho artefakt tento súbor automaticky prepíše, explicitné ukladanie nie je nutné. 
+Grafické rozhranie umožňuje navigáciu cez jednotlivé segmenty nameraného EKG signálu, pričom ich dĺžka je voliteľná. Na pohyb medzi jednotlivými segmentmi sa dajú použiť buď tlačidlá umiestnené pod oknom, v ktorom sa zobrazuje aktuálny segment, alebo pomocou ľavej a pravej šípky na klávesnici. V ľavom hornom rohu okna zobrazujúceho aktuálny segment sa nachádza číslo aktuálneho segmentu a ich celkový počet. V paneli na pravej strane okna sa nachádza typ pohybovej aktivity a použitých elektród, oboje sú odvodené od názvu súboru. V neposlednom rade sa tu nachádzajú aj prepínacie tlačidlá, ktorými sa anotuje daný segment podľa rozličnej úrovne znečistenia pohybovým artefaktom. Tieto tlačidlá sa dajú opäť ovládať priamo kliknutím, alebo sa dá na ich prepínanie využiť medzerník na klávesnici. Pri otvorení vstupného súboru, ktorý chce používateľ anotovať, sa automaticky vytvorí výstupný \textit{.csv} súbor, rovnako sa pri zmene stavu prepínacieho tlačidla označujúceho artefakt tento súbor automaticky prepíše, explicitné ukladanie nie je nutné. 
 
 Používateľské rozhranie je možné spustiť pomocou príkazu \textbf{python3 data\_labeler.py} z príslušnej zložky, a voliteľné parametre sú nasledovné:
 
@@ -597,15 +564,47 @@ Používateľské rozhranie je možné spustiť pomocou príkazu \textbf{python3
 \end{tabbing}
 
 
+%---------------------------------------------------------------
+\section{Použité elektródy}
+%---------------------------------------------------------------
+
+TODO
+
+
+%---------------------------------------------------------------
+\section{Priebeh experimentu}
+%---------------------------------------------------------------
+
+Po príchode na pracovisko bol každý subjekt oboznámený s priebehom a dĺžkou experimentu, a bol požiadaný o podpísanie informovaného súhlasu (Dodatok A). Subjekt bol informovaný o tom, že účasť na experimente je dobrovoľná, aj o možnosti kedykoľvek svoju účasť na experimente ukončiť, a to bez udania dôvodu. Taktiež bol informovaný o možnosti odmietnuť vykonávať akýkoľvek úkon v prípade, že by bol pre neho príliš fyzicky náročný. Následne bol každý subjekt požiadaný o vyplnenie dotazníku (Dodatok B), v ktorom sa zisťovali nasledovné údaje: meno, pohlavie, vek, výška, váha a obvod hrudníka. Dotazník obsahuje aj otvorenú časť týkajúcu sa pohybových obmedzení a ochorení kardiovaskulárneho a respiračného systému, ktoré by znemožňovali účasť v experimente. V kontexte dotazníka bol každý poučený, že záznamy, podľa ktorých je možné subjekt identifikovať, budú uschované ako dôverné dokumenty a nebudú verejne sprístupnené. Taktiež že v prípade, kedy budú výsledky štúdie publikované, jeho totožnosť nebude zverejnená. V informovanom súhlase bolo zdôraznené aj to, že zo získaných dát nebudú vyvodzované žiadne závery týkajúce sa zdravotného stavu.
+
+Podpisom informovaného súhlasu a vyplnením dotazníku subjekt potvrdil, že sa ho netýkajú žiadne z nasledovných vylučovacích kritérií. Fáza experimentu, ktorá zahŕňa fyzickú záťaž, vyžadovala vylúčenie osôb, ktoré trpia závažným ochorením respiračného alebo kardiovaskulárneho systému. Kvôli pohybu na bežiacom páse bolo potrebné z experimentu vylúčiť aj osoby trpiace zníženou pohyblivosťou, alebo zníženou funkciou rovnovážneho systému, a to aj v prípade zapríčinenia konzumáciou alkoholu, alebo inej omamnej látky. Dĺžka experimentu na jeden subjekt bola stanovená na 30 minút - 15 minút rezervovaných na samotné merania a zvyšných 15 minút na réžiu spojenú s výmenou elektród a prechodom medzi jednotlivými pohybovými aktivitami. Je dôležité spomenúť, že dĺžka vykonávaného úkonu nebola vždy presne jedna minúta, ide o približný časový údaj. Napríklad pri postupnej zmene rýchlosti pohybu na bežiacom páse bolo potrebné počkať na ustálenie rýchlosti.
+
+Poradie jednotlivých úkonov vrámci experimentu bolo stanovené tak, ako je uvedené v tabuľke \ref{tab:activities}. Takto stanovená séria úkonov bola vykonávaná tri krát, zakaždým s iným druhom elektród. Poradie úkonov bolo pre správnosť postupu zostavené tak, aby záťaž narastala, aj keď zvyšujúca sa srdcová frekvencia by nemala mať vplyv na výskyt pohybových artefaktov v zázname. Navyše mal medzi každou sériou úkonov subjekt možnosť oddýchnuť si počas výmeny elektród, ktorá trvala niekoľko minút, čo umožnilo klesnutie srdcovej frekvencie späť na kľudovú pred začiatkom ďalšej série úkonov. 
+
+\begin{table}[H]\centering
+\caption[Poradie pohybových aktivít]{~Poradie pohybových aktivít}\label{tab:activities}
+    \begin{tabular}{l|c}
+    	\textbf{Pohybová aktivita}  & \textbf{Doba merania vo formáte od - do (mm:ss)}        \tabularnewline \hline 
+     	Kľud                        & 0:00 - 1:00                                   \tabularnewline \hline
+     	Pohyby hornými končatinami	& 1:00 - 2:00                                   \tabularnewline \hline
+        Chôdza 4 km/h           	& 2:00 - 3:00                                   \tabularnewline \hline
+        Beh	8 km/h                  & 3:00 - 4:00                                   \tabularnewline \hline
+        Drepy	                    & 4:00 - 5:00                                   \tabularnewline 
+    \end{tabular}
+\end{table}
+
+Vyššie uvedená séria úkonov bola vykonávaná najskôr s gélovými elektródami, následne s hrudným pásom s plošnými elektródami z nerezovej ocele a na záver s hrudným pásom s textilnými elektródami. Poradie elektród bolo zvolené tak, aby sme minimalizovali nutnosť prípravy pokožky subjektov. Keďže gélové elektródy obsahujú vodivú zložku, nie je potrebná žiadna ďalšia príprava pokožky. Elektródy z nerezovej ocele a textilné elektródy fungujú lepšie ak je subjekt trochu zahriaty a tým pádom spotený, keďže pot zvyšuje vodivé vlastnosti medzi kožou a elektródou. Nadmerné potenie môže naopak viesť k saturácii elektródy a spôsobiť tak väčší výskyt pohybových artefaktov, zvolené úkony však nepredstavovali takú záťaž, aby zapríčinili nadmerné potenie subjektov. V prípade, že subjekt nebol po prvej sérii úkonov dostatočne spotený, simulovali sme tento jav jemným zvlhčením pokožky v miestach dotyku elektród.
+
+
 
 %---------------------------------------------------------------
 \chapter{Dátová sada}
 %---------------------------------------------------------------
 
-V nasledujúcej kapitole opíšeme štruktúru vzniknutej dátovej sady a v krátkosti aj rôzne štatistiky vyplývajúce z nej, ako napríklad súvis jednotlivých typov elektród s výskytom pohybových artefaktov. Dáta pre účastníkov experimentu sú členené do zložiek, pričom každý účastník ma svoju vlastnú, ktorá obsahuje všetky zaznamenané EKG dáta a k ním príslušné anotácie artefaktov. Experimentu za zúčastnilo \textbf{10 účastníkov}, pre každého je nameraných niekoľko záznamov dlhých približne jednu minútu - \textbf{5 rôznych fyzických aktivít} zaznamenaných pomocou \textbf{3 rôznych typov elektród}. Dostávame teda 15 záznamov pre každého účastníka, takže dokopy \textbf{150 minútových záznamov EKG}. Každý z týchto záznamov bol následne rozdelený na segmenty dlhé 2 sekundy, čím na záver získavame približne \textbf{4500 anotovaných segmentov}.
+V nasledujúcej kapitole opíšeme štruktúru vzniknutej dátovej sady a v krátkosti aj rôzne štatistiky vyplývajúce z nej, ako napríklad súvis jednotlivých typov elektród s výskytom pohybových artefaktov. Dáta pre účastníkov experimentu sú členené do zložiek, pričom každý subjekt ma svoju vlastnú, ktorá obsahuje všetky zaznamenané EKG dáta a k ním príslušné anotácie artefaktov. Experimentu za zúčastnilo \textbf{10 subjektov}, pre každého je nameraných niekoľko záznamov dlhých približne jednu minútu - \textbf{5 rôznych fyzických aktivít} zaznamenaných pomocou \textbf{3 rôznych typov elektród}. Dostávame teda 15 záznamov pre každý subjekt, takže dokopy \textbf{150 minútových záznamov EKG}. Každý z týchto záznamov bol následne rozdelený na segmenty dlhé 2 sekundy, čím na záver získavame približne \textbf{4500 anotovaných segmentov}.
 
 %---------------------------------------------------------------
-\section{Demografia účastníkov experimentu}
+\section{Anotácia dátovej sady}
 %---------------------------------------------------------------
 
 TODO
@@ -617,7 +616,7 @@ TODO
 EKG signál je zaznamenaný do súboru, ktorý obsahuje iba dva stĺpce - jeden pre časový údaj a druhý pre hodnotu signálu v danom čase, jeho štruktúru je možné vidieť v tabuľke \ref{tab:input}. Prvý aj druhý stĺpec obsahuje záznam vo forme časovej rady, v ukážke je zobrazených prvých 5 vzoriek záznamu.
 
 \begin{table}[H]\centering
-\caption[]{~Súbor s EKG záznamom}\label{tab:input}
+\caption[Súbor s EKG záznamom]{~Súbor s EKG záznamom}\label{tab:input}
     \begin{tabular}{c|c}
     	\textbf{timestamp} 	        & \textbf{value}   \tabularnewline \hline 
      	2024-03-26 15:04:53.249732  & 1698	           \tabularnewline \hline
@@ -628,10 +627,10 @@ EKG signál je zaznamenaný do súboru, ktorý obsahuje iba dva stĺpce - jeden 
     \end{tabular}
 \end{table}
 
-Pre správnu anotáciu typu pohybovej aktivity a zobrazenie druhu elektród v grafickom rozhraní je potrebné dodržať zaužívané názvoslovie súboru, ktoré je \textit{XX\_TYP-ELEKTRÓDY\_TYP-AKTIVITY.csv}. Typ pohybovej aktivity je kódovaný podľa tabuľky \ref{tab:labels_activity}, pričom neznáma hodnota sa uvádza v prípade, že názov súboru na príslušnom mieste neobsahuje ani jednu z uvedených aktivít. Typ použitých elektród je zas kódovaný podľa tabuľky \ref{tab:labels_electrode}.
+Pre správnu anotáciu typu pohybovej aktivity a zobrazenie druhu elektród v grafickom rozhraní je potrebné dodržať zaužívané názvoslovie súboru, ktoré je \textit{ID\_TYP-ELEKTRÓDY\_TYP-AKTIVITY.csv}. Typ pohybovej aktivity je kódovaný podľa tabuľky \ref{tab:labels_activity}, pričom neznáma hodnota sa uvádza v prípade, že názov súboru na príslušnom mieste neobsahuje ani jednu z uvedených aktivít. Typ použitých elektród je kódovaný podľa tabuľky \ref{tab:labels_electrode}.
 
 \begin{table}[H]\centering
-\caption[]{~Kódovanie pohybovej aktivity}\label{tab:labels_activity}
+\caption[Kódovanie pohybovej aktivity]{~Kódovanie pohybovej aktivity}\label{tab:labels_activity}
     \begin{tabular}{l|c}
     	\textbf{Pohybová aktivita}  & \textbf{Číselná hodnota}    \tabularnewline \hline 
      	Kľudová fáza                & 0	                          \tabularnewline \hline
@@ -644,7 +643,7 @@ Pre správnu anotáciu typu pohybovej aktivity a zobrazenie druhu elektród v gr
 \end{table}
 
 \begin{table}[H]\centering
-\caption[]{~Kódovanie typu elektród}\label{tab:labels_electrode}
+\caption[Kódovanie typu elektród]{~Kódovanie typu elektród}\label{tab:labels_electrode}
     \begin{tabular}{l|c}
     	\textbf{Typ elektród}  & \textbf{Číselná hodnota}     \tabularnewline \hline 
      	Ag/AgCl                & 1	                          \tabularnewline \hline
@@ -653,21 +652,54 @@ Pre správnu anotáciu typu pohybovej aktivity a zobrazenie druhu elektród v gr
     \end{tabular}
 \end{table}
 
-Názvoslovie súborov vytvorených pomocou grafického rozhrania na anotáciu dát je nasledovné - \textit{XX\_TYP-ELEKTRÓDY\_TYP-AKTIVITY\_DĹŽKA-SEGMENTU.csv}. Dĺžka segmentu je v názve uvedená kvôli tomu, aby sa dali odlíšiť anotácie tých istých vstupných súborov pre rôzne zvolené dĺžky segmentu. Súbory obsahujú stĺpec pre začiatočnú a koncovú pozíciu segmentu, typ aktivity a artefakt, ich štruktúra je zobrazená v tabuľke \ref{tab:output}. Príklad obsahuje anotáciu pre vstupný súbor obsahujúci záznam EKG signálu účastníka vykonávajúceho pohyb hornými končatinami. Vzorkovacia frekvencia je 500 vzoriek za sekundu a dĺžka segmentu 2 sekundy, pričom prvé dva segmenty obsahujú pohybový artefakt a nasledujúce dva nie. 
+Názvoslovie súborov vytvorených pomocou grafického rozhrania na anotáciu dát je nasledovné - \textit{ID\_TYP-ELEKTRÓDY\_TYP-AKTIVITY\_DĹŽKA-SEGMENTU.csv}. Dĺžka segmentu je v názve uvedená kvôli tomu, aby sa dali odlíšiť anotácie tých istých vstupných súborov pre rôzne zvolené dĺžky segmentu. Súbory obsahujú stĺpec pre začiatočnú a koncovú pozíciu segmentu, typ aktivity a artefakt, ich štruktúra je zobrazená v tabuľke \ref{tab:output}. Príklad obsahuje anotáciu pre vstupný súbor obsahujúci záznam EKG signálu účastníka vykonávajúceho pohyb hornými končatinami. Vzorkovacia frekvencia je 500 vzoriek za sekundu a dĺžka segmentu 2 sekundy, pričom prvé dva segmenty sú klasifikované ako signál s minimálnym rušením, nasledujúce dva ako signál s rušením stupňa dva, potom nasleduje jeden segment s rušením stupňa tri, a posledný je klasifikovaný ako signál, ktorý obsahuje rušenie nezlúčiteľné so správnym určením srdcovej frekvencie.
 
 \begin{table}[H]\centering
-\caption[]{~Výstupný súbor s anotovanými dátami}\label{tab:output}
+\caption[Výstupný súbor s anotovanými dátami]{~Výstupný súbor s anotovanými dátami}\label{tab:output}
     \begin{tabular}{c|c|c|c}
     	\textbf{start} & \textbf{end} & \textbf{activity} & \textbf{artifact}  \tabularnewline \hline 
-     	0		       & 1000		  & 1	              & 0	               \tabularnewline \hline
-     	1000	       & 2000	      & 1	              & 0	               \tabularnewline \hline
-        2000	       & 3000	      & 1	              & 1	               \tabularnewline \hline
-        3000	       & 4000	      & 1	              & 1	               \tabularnewline
+     	0		       & 1000		  & 1	              & 1	               \tabularnewline \hline
+     	1000	       & 2000	      & 1	              & 1	               \tabularnewline \hline
+        2000	       & 3000	      & 1	              & 2	               \tabularnewline \hline
+        3000	       & 4000	      & 1	              & 2	               \tabularnewline
+        \hline
+        4000	       & 5000	      & 1	              & 3	               \tabularnewline \hline
+        5000	       & 6000	      & 1	              & 4	               \tabularnewline
     \end{tabular}
 \end{table}
 
+%---------------------------------------------------------------
+\section{Predspracovanie dát}
+%---------------------------------------------------------------
+
+TODO
 
 
 %---------------------------------------------------------------
-\chapter{Zhodnotenie}
+\section{Dátová analýza}
 %---------------------------------------------------------------
+
+TODO
+
+
+%---------------------------------------------------------------
+\chapter{Výsledky}
+%---------------------------------------------------------------
+
+TODO
+
+
+
+%---------------------------------------------------------------
+\chapter{Diskusia}
+%---------------------------------------------------------------
+
+TODO
+
+
+
+%---------------------------------------------------------------
+\chapter{Záver}
+%---------------------------------------------------------------
+
+TODO
