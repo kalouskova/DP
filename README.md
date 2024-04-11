@@ -2,11 +2,11 @@
 ## Master's thesis
 
 ### /data
-All of the raw ECG data files are located in this directory. There is a separate numbered directory for each of the subjects, the subdirectory /labels contains files with manually labeled data.
-* The filename convention for the ECG data located in */data/XX* directory is  
-*XX_ELECTRODE-TYPE_ACTIVITY-TYPE.csv*
+All of the raw ECG data files are located in this directory. There is a separate numbered directory for each of the subjects based on the assigned subject ID, the subdirectory /labels contains files with manually labeled data.
+* The filename convention for the ECG data located in */data/ID* directory is  
+*ID_ELECTRODE-TYPE_ACTIVITY-TYPE.csv*
 * The filename convention for corresponding ECG data labels located in */data/XX/labels* directory is  
-*XX_ELECTRODE-TYPE_ACTIVITY-TYPE_SEG-LEN.csv*
+*ID_ELECTRODE-TYPE_ACTIVITY-TYPE_SEG-LEN.csv*
 
 __ELECTRODE-TYPE encoding:__
 * 01    - Ag/AgCl electrodes
@@ -31,8 +31,8 @@ data_labeler.py [-l segment_length] [-f sampling_rate] [-s starting_segment] inp
 * sampling_rate (int)    - sampling frequency of input file, defaults to 500 frames per second
 * starting_segment (int) - segment number to display, defaults to fist segment
 
-Labels automatically default to artefact present for all activities besides rest, which defaults to no artefact. There is no need to save the labels, the output .csv file is updated after each artefact button toggle.
+Labels automatically default to artefact of degree 2 present for all activities besides rest, which defaults to artefact of degree 1, which corresponds to little to no artefact present. There is no need to save the labels, the output .csv file is updated after each artefact button toggle.
 
-__NOTE: *Instead of using the GUI buttons for switching between samples and labelling one can opt to use keyboard shortcuts - left key and right key for switching, space key for toggling the artefact toggle button, enter key for leaving the application.*__
+__NOTE: *Instead of using the GUI buttons for switching between samples and labelling one can opt to use keyboard shortcuts - left key and right key for switching, space key for toggling the artefact toggle buttons, enter key for leaving the application.*__
 
 

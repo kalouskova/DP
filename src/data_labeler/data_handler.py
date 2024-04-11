@@ -53,9 +53,9 @@ class DataHandler():
 
         # Default values based on activity type - rest defaults to no artifact, other activities to artifact present
         if (type == 0):
-            self.df_out['artifact'] = 0
-        else:
             self.df_out['artifact'] = 1
+        else:
+            self.df_out['artifact'] = 2
 
     #   Set value of artifact based on radio button selection
     def set_artifact(self, seg_curr, label):
@@ -90,11 +90,11 @@ class DataHandler():
     def get_electrode_type(self):
         type = self.FILE_IN.split('_')[1]
 
-        if '01' in type:
+        if '1' in type:
             return 'Ag/AgCl'
-        elif '02' in type:
+        elif '2' in type:
             return 'Chrome Nickel'
-        elif '03' in type:
+        elif '3' in type:
             return 'Textile'
         else:
             return 'Unknown'

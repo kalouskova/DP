@@ -14,6 +14,8 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
 from PyQt5 import QtWidgets, QtCore
 plt.use('Qt5Agg')
 
+from scipy import signal, ndimage
+
 
 class MplCanvas(FigureCanvasQTAgg):
 
@@ -114,16 +116,25 @@ class MainWindow(QtWidgets.QMainWindow):
         label = QtWidgets.QLabel('CATEGORY')
         layout.addWidget(label, 7, 11)
 
-        self.radio_ok = QtWidgets.QRadioButton('OK')
-        self.radio_ok.setChecked(True)
-        self.radio_ok.label = 0
-        self.radio_ok.toggled.connect(self.on_click)
-        layout.addWidget(self.radio_ok, 8, 11)
+        self.radio_1 = QtWidgets.QRadioButton('1')
+        self.radio_1.label = 1
+        self.radio_1.toggled.connect(self.on_click)
+        layout.addWidget(self.radio_1, 8, 11)
 
-        self.radio_artifact = QtWidgets.QRadioButton('Artefact')
-        self.radio_artifact.label = 1
-        self.radio_artifact.toggled.connect(self.on_click)
-        layout.addWidget(self.radio_artifact, 8, 12)
+        self.radio_2 = QtWidgets.QRadioButton('2')
+        self.radio_2.label = 2
+        self.radio_2.toggled.connect(self.on_click)
+        layout.addWidget(self.radio_2, 9, 11)
+
+        self.radio_3 = QtWidgets.QRadioButton('3')
+        self.radio_3.label = 3
+        self.radio_3.toggled.connect(self.on_click)
+        layout.addWidget(self.radio_3, 10, 11)
+
+        self.radio_4 = QtWidgets.QRadioButton('4')
+        self.radio_4.label = 4
+        self.radio_4.toggled.connect(self.on_click)
+        layout.addWidget(self.radio_4, 11, 11)
 
         widget = QtWidgets.QWidget()
         widget.setLayout(layout)
@@ -151,7 +162,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.canvas.axes.text(0.01, 0.98, title, ha='left', va='top', color='blue', fontsize = 10, transform=self.canvas.axes.transAxes)
        
         self.canvas.axes.set_xlim((seg_start, seg_start + self.SEG_LEN))
-        self.canvas.axes.set_ylim((min(self.DATA) - 1000, max(self.DATA) + 1000))
+        self.canvas.axes.set_ylim((max(self.DATA) + 1000, min(self.DATA) - 1000))
 
         # Trigger the canvas to update and redraw
         self.canvas.draw()
@@ -163,17 +174,25 @@ class MainWindow(QtWidgets.QMainWindow):
     def update_selection(self):
         artifact = self.dh.get_artifact(self.seg_curr)
 
-        if not artifact:
-            self.radio_ok.setChecked(True)
-        else:
-            self.radio_artifact.setChecked(True)
+        if artifact == 1:
+            self.radio_1.setChecked(True)
+        elif artifact == 2:
+            self.radio_2.setChecked(True)
+        elif artifact == 3:
+            self.radio_3.setChecked(True)
+        elif artifact == 4:
+            self.radio_4.setChecked(True)
 
     #   Handle radio button space keypress
     def on_toggle(self):
-        if (self.radio_ok.isChecked()):
-            self.radio_artifact.setChecked(True)
-        elif (self.radio_artifact.isChecked()):
-            self.radio_ok.setChecked(True)
+        if (self.radio_1.isChecked()):
+            self.radio_2.setChecked(True)
+        elif (self.radio_2.isChecked()):
+            self.radio_3.setChecked(True)
+        elif (self.radio_3.isChecked()):
+            self.radio_4.setChecked(True)
+        elif (self.radio_4.isChecked()):
+            self.radio_1.setChecked(True)
 
     #   Handle radio button keypress
     def on_click(self):
