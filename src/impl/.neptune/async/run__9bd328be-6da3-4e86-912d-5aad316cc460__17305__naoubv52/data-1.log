@@ -1,0 +1,46 @@
+{"obj": {"type": "AssignString", "path": ["sys", "name"], "value": "Untitled"}, "version": 1, "at": 1713312239.6273699}
+{"obj": {"type": "AssignString", "path": ["sys", "description"], "value": ""}, "version": 2, "at": 1713312239.6277702}
+{"obj": {"type": "AssignString", "path": ["monitoring", "72de9841", "hostname"], "value": "Veronikas-MBP"}, "version": 3, "at": 1713312239.628007}
+{"obj": {"type": "AssignString", "path": ["sys", "hostname"], "value": "Veronikas-MBP"}, "version": 4, "at": 1713312239.628224}
+{"obj": {"type": "AssignString", "path": ["monitoring", "72de9841", "pid"], "value": "17305"}, "version": 5, "at": 1713312239.628407}
+{"obj": {"type": "AssignString", "path": ["monitoring", "72de9841", "tid"], "value": "140704674978688"}, "version": 6, "at": 1713312239.6287181}
+{"obj": {"type": "AssignBool", "path": ["sys", "failed"], "value": false}, "version": 7, "at": 1713312239.6289122}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "learning_rate"], "value": 0.001}, "version": 8, "at": 1713312561.240297}
+{"obj": {"type": "AssignString", "path": ["parameters", "optimizer"], "value": "Adam"}, "version": 9, "at": 1713312561.242623}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "learning_rate"], "value": 0.001}, "version": 10, "at": 1713312674.917963}
+{"obj": {"type": "AssignString", "path": ["parameters", "optimizer"], "value": "Adam"}, "version": 11, "at": 1713312674.9200268}
+{"obj": {"type": "AssignInt", "path": ["parameters", "epochs"], "value": 200}, "version": 12, "at": 1713312674.920324}
+{"obj": {"type": "AssignInt", "path": ["parameters", "batch_size"], "value": 128}, "version": 13, "at": 1713312674.9204538}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "learning_rate"], "value": 0.0001}, "version": 14, "at": 1713313007.785171}
+{"obj": {"type": "AssignString", "path": ["parameters", "optimizer"], "value": "Adam"}, "version": 15, "at": 1713313007.7876322}
+{"obj": {"type": "AssignInt", "path": ["parameters", "epochs"], "value": 200}, "version": 16, "at": 1713313007.787764}
+{"obj": {"type": "AssignInt", "path": ["parameters", "batch_size"], "value": 128}, "version": 17, "at": 1713313007.787912}
+{"obj": {"type": "AssignFloat", "path": ["eval", "accuracy"], "value": 0.4098360655737705}, "version": 18, "at": 1713313060.083102}
+{"obj": {"type": "AssignFloat", "path": ["eval", "accuracy"], "value": 0.38934426229508196}, "version": 19, "at": 1713313483.666164}
+{"obj": {"type": "AssignFloat", "path": ["eval", "accuracy"], "value": 0.42213114754098363}, "version": 20, "at": 1713313594.0440571}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "learning_rate"], "value": 1e-05}, "version": 21, "at": 1713313710.625215}
+{"obj": {"type": "AssignString", "path": ["parameters", "optimizer"], "value": "Adam"}, "version": 22, "at": 1713313710.627003}
+{"obj": {"type": "AssignInt", "path": ["parameters", "epochs"], "value": 200}, "version": 23, "at": 1713313710.627126}
+{"obj": {"type": "AssignInt", "path": ["parameters", "batch_size"], "value": 128}, "version": 24, "at": 1713313710.627298}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "learning_rate"], "value": 1e-05}, "version": 25, "at": 1713313779.2944698}
+{"obj": {"type": "AssignString", "path": ["parameters", "optimizer"], "value": "Adam"}, "version": 26, "at": 1713313779.296948}
+{"obj": {"type": "AssignInt", "path": ["parameters", "epochs"], "value": 500}, "version": 27, "at": 1713313779.2970948}
+{"obj": {"type": "AssignInt", "path": ["parameters", "batch_size"], "value": 128}, "version": 28, "at": 1713313779.297194}
+{"obj": {"type": "AssignFloat", "path": ["eval", "accuracy"], "value": 0.39617486338797814}, "version": 29, "at": 1713314248.336113}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "learning_rate"], "value": 0.0001}, "version": 30, "at": 1713314261.202871}
+{"obj": {"type": "AssignString", "path": ["parameters", "optimizer"], "value": "Adam"}, "version": 31, "at": 1713314261.2033489}
+{"obj": {"type": "AssignInt", "path": ["parameters", "epochs"], "value": 200}, "version": 32, "at": 1713314261.203775}
+{"obj": {"type": "AssignInt", "path": ["parameters", "batch_size"], "value": 128}, "version": 33, "at": 1713314261.2040489}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "learning_rate"], "value": 0.0001}, "version": 34, "at": 1713370239.365139}
+{"obj": {"type": "AssignString", "path": ["parameters", "optimizer"], "value": "Adam"}, "version": 35, "at": 1713370239.3677702}
+{"obj": {"type": "AssignInt", "path": ["parameters", "epochs"], "value": 200}, "version": 36, "at": 1713370239.367913}
+{"obj": {"type": "AssignInt", "path": ["parameters", "batch_size"], "value": 128}, "version": 37, "at": 1713370239.367998}
+{"obj": {"type": "AssignFloat", "path": ["eval", "accuracy"], "value": 0.4098360655737705}, "version": 38, "at": 1713370320.018646}
+{"obj": {"type": "AssignFloat", "path": ["eval", "accuracy"], "value": 0.4275956284153005}, "version": 39, "at": 1713374985.260872}
+{"obj": {"type": "AssignFloat", "path": ["eval", "accuracy"], "value": 0.4180327868852459}, "version": 40, "at": 1713375059.1735182}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "learning_rate"], "value": 0.0001}, "version": 41, "at": 1713375088.036427}
+{"obj": {"type": "AssignString", "path": ["parameters", "optimizer"], "value": "Adam"}, "version": 42, "at": 1713375088.03718}
+{"obj": {"type": "AssignInt", "path": ["parameters", "epochs"], "value": 100}, "version": 43, "at": 1713375088.037838}
+{"obj": {"type": "AssignInt", "path": ["parameters", "batch_size"], "value": 128}, "version": 44, "at": 1713375088.037995}
+{"obj": {"type": "AssignFloat", "path": ["eval", "accuracy"], "value": 0.4180327868852459}, "version": 45, "at": 1713375187.481378}
+{"obj": {"type": "AssignFloat", "path": ["eval", "accuracy"], "value": 0.3825136612021858}, "version": 46, "at": 1713375190.226241}
