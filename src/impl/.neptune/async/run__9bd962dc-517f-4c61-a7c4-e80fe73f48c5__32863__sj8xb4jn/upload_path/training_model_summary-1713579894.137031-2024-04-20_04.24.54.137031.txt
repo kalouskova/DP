@@ -1,0 +1,39 @@
+Model: "model_40"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ signal_input (InputLayer)   [(None, 1000)]               0         []                            
+                                                                                                  
+ frequency_input (InputLaye  [(None, 200)]                0         []                            
+ r)                                                                                               
+                                                                                                  
+ concatenate_20 (Concatenat  (None, 1200)                 0         ['signal_input[0][0]',        
+ e)                                                                  'frequency_input[0][0]']     
+                                                                                                  
+ dense_208 (Dense)           (None, 1024)                 1229824   ['concatenate_20[0][0]']      
+                                                                                                  
+ dropout_204 (Dropout)       (None, 1024)                 0         ['dense_208[0][0]']           
+                                                                                                  
+ dense_209 (Dense)           (None, 512)                  524800    ['dropout_204[0][0]']         
+                                                                                                  
+ dropout_205 (Dropout)       (None, 512)                  0         ['dense_209[0][0]']           
+                                                                                                  
+ dense_210 (Dense)           (None, 256)                  131328    ['dropout_205[0][0]']         
+                                                                                                  
+ dropout_206 (Dropout)       (None, 256)                  0         ['dense_210[0][0]']           
+                                                                                                  
+ dense_211 (Dense)           (None, 128)                  32896     ['dropout_206[0][0]']         
+                                                                                                  
+ dropout_207 (Dropout)       (None, 128)                  0         ['dense_211[0][0]']           
+                                                                                                  
+ dense_212 (Dense)           (None, 64)                   8256      ['dropout_207[0][0]']         
+                                                                                                  
+ dropout_208 (Dropout)       (None, 64)                   0         ['dense_212[0][0]']           
+                                                                                                  
+ output (Dense)              (None, 5)                    325       ['dropout_208[0][0]']         
+                                                                                                  
+==================================================================================================
+Total params: 1927429 (7.35 MB)
+Trainable params: 1927429 (7.35 MB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________

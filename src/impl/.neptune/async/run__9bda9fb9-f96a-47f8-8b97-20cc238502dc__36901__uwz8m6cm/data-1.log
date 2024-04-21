@@ -1,0 +1,51 @@
+{"obj": {"type": "AssignString", "path": ["sys", "name"], "value": "Untitled"}, "version": 1, "at": 1713632849.4567082}
+{"obj": {"type": "AssignString", "path": ["sys", "description"], "value": ""}, "version": 2, "at": 1713632849.457231}
+{"obj": {"type": "AssignString", "path": ["monitoring", "b9f3521d", "hostname"], "value": "Veronikas-MBP"}, "version": 3, "at": 1713632849.4575942}
+{"obj": {"type": "AssignString", "path": ["sys", "hostname"], "value": "Veronikas-MBP"}, "version": 4, "at": 1713632849.457778}
+{"obj": {"type": "AssignString", "path": ["monitoring", "b9f3521d", "pid"], "value": "36901"}, "version": 5, "at": 1713632849.457931}
+{"obj": {"type": "AssignString", "path": ["monitoring", "b9f3521d", "tid"], "value": "140704674978688"}, "version": 6, "at": 1713632849.458074}
+{"obj": {"type": "AssignBool", "path": ["sys", "failed"], "value": false}, "version": 7, "at": 1713632849.458178}
+{"obj": {"type": "AssignInt", "path": ["parameters", "epochs"], "value": 50}, "version": 8, "at": 1713632849.468792}
+{"obj": {"type": "AssignInt", "path": ["parameters", "batch_size"], "value": 16}, "version": 9, "at": 1713632849.47019}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "learning_rate"], "value": 0.001}, "version": 10, "at": 1713632849.470515}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "dropout"], "value": 0.5}, "version": 11, "at": 1713632849.4710789}
+{"obj": {"type": "AssignString", "path": ["parameters", "optimizer"], "value": "Adam"}, "version": 12, "at": 1713632849.4714382}
+{"obj": {"type": "AssignString", "path": ["parameters", "hidden_activation"], "value": "relu"}, "version": 13, "at": 1713632849.471678}
+{"obj": {"type": "AssignString", "path": ["parameters", "output_activation"], "value": "softmax"}, "version": 14, "at": 1713632849.471939}
+{"obj": {"type": "AssignString", "path": ["parameters", "loss"], "value": "categorical_crossentropy"}, "version": 15, "at": 1713632849.472081}
+{"obj": {"type": "AssignString", "path": ["parameters", "metric"], "value": "accuracy"}, "version": 16, "at": 1713632849.472269}
+{"obj": {"type": "AssignString", "path": ["source_code", "integrations", "neptune-tensorflow-keras"], "value": "2.2.2"}, "version": 17, "at": 1713632849.472739}
+{"obj": {"type": "AssignString", "path": ["training", "model", "optimizer_config", "name"], "value": "Adam"}, "version": 18, "at": 1713632849.5570402}
+{"obj": {"type": "AssignString", "path": ["training", "model", "optimizer_config", "weight_decay"], "value": "None"}, "version": 19, "at": 1713632849.557246}
+{"obj": {"type": "AssignString", "path": ["training", "model", "optimizer_config", "clipnorm"], "value": "None"}, "version": 20, "at": 1713632849.557408}
+{"obj": {"type": "AssignString", "path": ["training", "model", "optimizer_config", "global_clipnorm"], "value": "None"}, "version": 21, "at": 1713632849.557567}
+{"obj": {"type": "AssignString", "path": ["training", "model", "optimizer_config", "clipvalue"], "value": "None"}, "version": 22, "at": 1713632849.557687}
+{"obj": {"type": "AssignBool", "path": ["training", "model", "optimizer_config", "use_ema"], "value": false}, "version": 23, "at": 1713632849.5577931}
+{"obj": {"type": "AssignFloat", "path": ["training", "model", "optimizer_config", "ema_momentum"], "value": 0.99}, "version": 24, "at": 1713632849.557899}
+{"obj": {"type": "AssignString", "path": ["training", "model", "optimizer_config", "ema_overwrite_frequency"], "value": "None"}, "version": 25, "at": 1713632849.558008}
+{"obj": {"type": "AssignBool", "path": ["training", "model", "optimizer_config", "jit_compile"], "value": false}, "version": 26, "at": 1713632849.5581021}
+{"obj": {"type": "AssignBool", "path": ["training", "model", "optimizer_config", "is_legacy_optimizer"], "value": false}, "version": 27, "at": 1713632849.558192}
+{"obj": {"type": "AssignFloat", "path": ["training", "model", "optimizer_config", "learning_rate"], "value": 0.0010000000474974513}, "version": 28, "at": 1713632849.558296}
+{"obj": {"type": "AssignFloat", "path": ["training", "model", "optimizer_config", "beta_1"], "value": 0.9}, "version": 29, "at": 1713632849.558389}
+{"obj": {"type": "AssignFloat", "path": ["training", "model", "optimizer_config", "beta_2"], "value": 0.999}, "version": 30, "at": 1713632849.5584798}
+{"obj": {"type": "AssignFloat", "path": ["training", "model", "optimizer_config", "epsilon"], "value": 1e-07}, "version": 31, "at": 1713632849.55857}
+{"obj": {"type": "AssignBool", "path": ["training", "model", "optimizer_config", "amsgrad"], "value": false}, "version": 32, "at": 1713632849.558671}
+{"obj": {"type": "AssignInt", "path": ["training", "fit_params", "verbose"], "value": 1}, "version": 33, "at": 1713632849.558833}
+{"obj": {"type": "AssignInt", "path": ["training", "fit_params", "epochs"], "value": 50}, "version": 34, "at": 1713632849.5589209}
+{"obj": {"type": "AssignInt", "path": ["training", "fit_params", "steps"], "value": 165}, "version": 35, "at": 1713632849.559006}
+{"obj": {"type": "LogFloats", "path": ["training", "model", "learning_rate"], "values": [{"value": 0.0010000000474974513, "step": null, "ts": 1713632849.575789}]}, "version": 36, "at": 1713632849.575829}
+{"obj": {"type": "LogFloats", "path": ["training", "validation", "epoch", "loss"], "values": [{"value": 1.2214219570159912, "step": null, "ts": 1713632852.1553369}]}, "version": 37, "at": 1713632852.1553779}
+{"obj": {"type": "LogFloats", "path": ["training", "validation", "epoch", "accuracy"], "values": [{"value": 0.4948805570602417, "step": null, "ts": 1713632852.155592}]}, "version": 38, "at": 1713632852.155614}
+{"obj": {"type": "LogFloats", "path": ["training", "train", "epoch", "loss"], "values": [{"value": 1.268206000328064, "step": null, "ts": 1713632852.1564748}]}, "version": 39, "at": 1713632852.156503}
+{"obj": {"type": "LogFloats", "path": ["training", "train", "epoch", "accuracy"], "values": [{"value": 0.4443177580833435, "step": null, "ts": 1713632852.156666}]}, "version": 40, "at": 1713632852.156688}
+{"obj": {"type": "LogFloats", "path": ["training", "model", "learning_rate"], "values": [{"value": 0.0010000000474974513, "step": null, "ts": 1713632852.159005}]}, "version": 41, "at": 1713632852.159043}
+{"obj": {"type": "LogFloats", "path": ["training", "validation", "epoch", "loss"], "values": [{"value": 1.1889373064041138, "step": null, "ts": 1713632854.700144}]}, "version": 42, "at": 1713632854.7001941}
+{"obj": {"type": "LogFloats", "path": ["training", "validation", "epoch", "accuracy"], "values": [{"value": 0.46416381001472473, "step": null, "ts": 1713632854.700417}]}, "version": 43, "at": 1713632854.7004411}
+{"obj": {"type": "LogFloats", "path": ["training", "train", "epoch", "loss"], "values": [{"value": 1.2327717542648315, "step": null, "ts": 1713632854.7011998}]}, "version": 44, "at": 1713632854.7012281}
+{"obj": {"type": "LogFloats", "path": ["training", "train", "epoch", "accuracy"], "values": [{"value": 0.46142151951789856, "step": null, "ts": 1713632854.7013462}]}, "version": 45, "at": 1713632854.701368}
+{"obj": {"type": "LogFloats", "path": ["training", "model", "learning_rate"], "values": [{"value": 0.0010000000474974513, "step": null, "ts": 1713632854.704635}]}, "version": 46, "at": 1713632854.704675}
+{"obj": {"type": "LogFloats", "path": ["training", "validation", "epoch", "loss"], "values": [{"value": 1.1944196224212646, "step": null, "ts": 1713632857.198209}]}, "version": 47, "at": 1713632857.19826}
+{"obj": {"type": "LogFloats", "path": ["training", "validation", "epoch", "accuracy"], "values": [{"value": 0.5187713503837585, "step": null, "ts": 1713632857.198522}]}, "version": 48, "at": 1713632857.19855}
+{"obj": {"type": "LogFloats", "path": ["training", "train", "epoch", "loss"], "values": [{"value": 1.2635271549224854, "step": null, "ts": 1713632857.199316}]}, "version": 49, "at": 1713632857.199347}
+{"obj": {"type": "LogFloats", "path": ["training", "train", "epoch", "accuracy"], "values": [{"value": 0.4541999101638794, "step": null, "ts": 1713632857.199471}]}, "version": 50, "at": 1713632857.1994948}
+{"obj": {"type": "LogFloats", "path": ["training", "model", "learning_rate"], "values": [{"value": 0.0010000000474974513, "step": null, "ts": 1713632857.2016058}]}, "version": 51, "at": 1713632857.201639}
