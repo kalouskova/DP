@@ -42,17 +42,20 @@ class DataHandler():
 
         start = np.arange(0, data_size - seg_len_pts + 1, seg_len_pts)
         end = np.arange(seg_len_pts, data_size + 1, seg_len_pts)
-        type, _ = self.get_activity_type()
+        
+        activity, _ = self.get_activity_type()
+        electrode, _ = self.get_electrode_type()
 
         # Initialize pandas dataframe for output data
-        self.df_out = pd.DataFrame(index=range(rows), columns=['start', 'end', 'activity', 'artifact'])
+        self.df_out = pd.DataFrame(index=range(rows), columns=['start', 'end', 'activity', 'artifact', 'electrode'])
 
         self.df_out['start'] = start
         self.df_out['end'] = end
-        self.df_out['activity'] = type
+        self.df_out['activity'] = activity
+        self.df_out['electrode'] = electrode
 
         # Default values based on activity type - rest defaults to no artifact, other activities to artifact present
-        if (type == 0):
+        if (activity == 0):
             self.df_out['artifact'] = 1
         else:
             self.df_out['artifact'] = 2
@@ -84,20 +87,20 @@ class DataHandler():
         elif 'drepy' in self.FILE_IN:
             return 4, 'Squats'
         else:
-            return 5, 'Unknown'
+            return -1, 'Unknown'
         
     #   Determine electrode type based on filename
     def get_electrode_type(self):
         type = self.FILE_IN.split('_')[1]
 
         if '1' in type:
-            return 'Ag/AgCl'
+            return int(type), 'Ag/AgCl'
         elif '2' in type:
-            return 'Chrome Nickel'
+            return int(type), 'Chrome Nickel'
         elif '3' in type:
-            return 'Textile'
+            return int(type), 'Textile'
         else:
-            return 'Unknown'
+            return int(-1), 'Unknown'
 
     #   Read input .csv file, handle possible exceptions
     def read_file(self):

@@ -14,9 +14,6 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
 from PyQt5 import QtWidgets, QtCore
 plt.use('Qt5Agg')
 
-from scipy import signal, ndimage
-
-
 class MplCanvas(FigureCanvasQTAgg):
 
     def __init__(self, parent=None, width=8, height=4, dpi=100):
@@ -108,7 +105,7 @@ class MainWindow(QtWidgets.QMainWindow):
         label = QtWidgets.QLabel('ELECTRODE TYPE')
         layout.addWidget(label, 4, 11, 1, 2)
 
-        electrode_label = self.dh.get_electrode_type()
+        _, electrode_label = self.dh.get_electrode_type()
         label = QtWidgets.QLabel(electrode_label)
         layout.addWidget(label, 5, 11, 1, 2)
 
