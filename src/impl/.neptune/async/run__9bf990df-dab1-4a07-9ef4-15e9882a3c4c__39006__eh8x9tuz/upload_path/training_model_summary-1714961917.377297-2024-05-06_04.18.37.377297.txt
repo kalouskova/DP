@@ -1,0 +1,44 @@
+Model: "model_3"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ frequency_input (InputLaye  [(None, 200)]                0         []                            
+ r)                                                                                               
+                                                                                                  
+ reshape_2 (Reshape)         (None, 200, 1)               0         ['frequency_input[0][0]']     
+                                                                                                  
+ conv1d_4 (Conv1D)           (None, 196, 64)              384       ['reshape_2[0][0]']           
+                                                                                                  
+ max_pooling1d_4 (MaxPoolin  (None, 98, 64)               0         ['conv1d_4[0][0]']            
+ g1D)                                                                                             
+                                                                                                  
+ conv1d_5 (Conv1D)           (None, 94, 128)              41088     ['max_pooling1d_4[0][0]']     
+                                                                                                  
+ signal_input (InputLayer)   [(None, 1000)]               0         []                            
+                                                                                                  
+ max_pooling1d_5 (MaxPoolin  (None, 47, 128)              0         ['conv1d_5[0][0]']            
+ g1D)                                                                                             
+                                                                                                  
+ dense_14 (Dense)            (None, 512)                  512512    ['signal_input[0][0]']        
+                                                                                                  
+ flatten_2 (Flatten)         (None, 6016)                 0         ['max_pooling1d_5[0][0]']     
+                                                                                                  
+ concatenate_3 (Concatenate  (None, 6528)                 0         ['dense_14[0][0]',            
+ )                                                                   'flatten_2[0][0]']           
+                                                                                                  
+ dense_15 (Dense)            (None, 256)                  1671424   ['concatenate_3[0][0]']       
+                                                                                                  
+ dense_16 (Dense)            (None, 128)                  32896     ['dense_15[0][0]']            
+                                                                                                  
+ dense_17 (Dense)            (None, 64)                   8256      ['dense_16[0][0]']            
+                                                                                                  
+ electrode_input (InputLaye  [(None, 1)]                  0         []                            
+ r)                                                                                               
+                                                                                                  
+ output (Dense)              (None, 5)                    325       ['dense_17[0][0]']            
+                                                                                                  
+==================================================================================================
+Total params: 2266885 (8.65 MB)
+Trainable params: 2266885 (8.65 MB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________
