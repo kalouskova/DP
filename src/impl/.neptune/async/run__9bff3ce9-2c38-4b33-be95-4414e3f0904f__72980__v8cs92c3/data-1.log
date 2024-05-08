@@ -1,0 +1,39 @@
+{"obj": {"type": "AssignString", "path": ["sys", "name"], "value": "Untitled"}, "version": 1, "at": 1715205408.736208}
+{"obj": {"type": "AssignString", "path": ["sys", "description"], "value": ""}, "version": 2, "at": 1715205408.736693}
+{"obj": {"type": "AssignString", "path": ["monitoring", "f9249234", "hostname"], "value": "Veronikas-MBP"}, "version": 3, "at": 1715205408.736892}
+{"obj": {"type": "AssignString", "path": ["sys", "hostname"], "value": "Veronikas-MBP"}, "version": 4, "at": 1715205408.737043}
+{"obj": {"type": "AssignString", "path": ["monitoring", "f9249234", "pid"], "value": "72980"}, "version": 5, "at": 1715205408.737203}
+{"obj": {"type": "AssignString", "path": ["monitoring", "f9249234", "tid"], "value": "140704674978688"}, "version": 6, "at": 1715205408.7373571}
+{"obj": {"type": "AssignBool", "path": ["sys", "failed"], "value": false}, "version": 7, "at": 1715205408.737484}
+{"obj": {"type": "AssignInt", "path": ["parameters", "epochs"], "value": 50}, "version": 8, "at": 1715205408.74913}
+{"obj": {"type": "AssignInt", "path": ["parameters", "batch_size"], "value": 16}, "version": 9, "at": 1715205408.750093}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "learning_rate"], "value": 0.0001}, "version": 10, "at": 1715205408.7508218}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "dropout"], "value": 0.1}, "version": 11, "at": 1715205408.75106}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "weight_decay"], "value": 0.0001}, "version": 12, "at": 1715205408.751342}
+{"obj": {"type": "AssignString", "path": ["parameters", "optimizer"], "value": "Adam"}, "version": 13, "at": 1715205408.7514958}
+{"obj": {"type": "AssignString", "path": ["parameters", "hidden_activation"], "value": "relu"}, "version": 14, "at": 1715205408.75161}
+{"obj": {"type": "AssignString", "path": ["parameters", "output_activation"], "value": "softmax"}, "version": 15, "at": 1715205408.7517161}
+{"obj": {"type": "AssignString", "path": ["parameters", "loss"], "value": "categorical_crossentropy"}, "version": 16, "at": 1715205408.751832}
+{"obj": {"type": "AssignString", "path": ["parameters", "metric"], "value": "accuracy"}, "version": 17, "at": 1715205408.751931}
+{"obj": {"type": "AssignInt", "path": ["parameters", "kernel_size"], "value": 5}, "version": 18, "at": 1715205408.7520251}
+{"obj": {"type": "AssignInt", "path": ["parameters", "pool_size"], "value": 2}, "version": 19, "at": 1715205408.7521138}
+{"obj": {"type": "AssignString", "path": ["source_code", "integrations", "neptune-tensorflow-keras"], "value": "2.2.2"}, "version": 20, "at": 1715205408.7526422}
+{"obj": {"type": "AssignString", "path": ["training", "model", "optimizer_config", "name"], "value": "Adam"}, "version": 21, "at": 1715205408.885365}
+{"obj": {"type": "AssignFloat", "path": ["training", "model", "optimizer_config", "weight_decay"], "value": 0.0001}, "version": 22, "at": 1715205408.88558}
+{"obj": {"type": "AssignString", "path": ["training", "model", "optimizer_config", "clipnorm"], "value": "None"}, "version": 23, "at": 1715205408.8857222}
+{"obj": {"type": "AssignString", "path": ["training", "model", "optimizer_config", "global_clipnorm"], "value": "None"}, "version": 24, "at": 1715205408.88583}
+{"obj": {"type": "AssignString", "path": ["training", "model", "optimizer_config", "clipvalue"], "value": "None"}, "version": 25, "at": 1715205408.8859332}
+{"obj": {"type": "AssignBool", "path": ["training", "model", "optimizer_config", "use_ema"], "value": false}, "version": 26, "at": 1715205408.8860319}
+{"obj": {"type": "AssignFloat", "path": ["training", "model", "optimizer_config", "ema_momentum"], "value": 0.99}, "version": 27, "at": 1715205408.886125}
+{"obj": {"type": "AssignString", "path": ["training", "model", "optimizer_config", "ema_overwrite_frequency"], "value": "None"}, "version": 28, "at": 1715205408.886226}
+{"obj": {"type": "AssignBool", "path": ["training", "model", "optimizer_config", "jit_compile"], "value": false}, "version": 29, "at": 1715205408.886315}
+{"obj": {"type": "AssignBool", "path": ["training", "model", "optimizer_config", "is_legacy_optimizer"], "value": false}, "version": 30, "at": 1715205408.886407}
+{"obj": {"type": "AssignFloat", "path": ["training", "model", "optimizer_config", "learning_rate"], "value": 0.0010000000474974513}, "version": 31, "at": 1715205408.8865018}
+{"obj": {"type": "AssignFloat", "path": ["training", "model", "optimizer_config", "beta_1"], "value": 0.9}, "version": 32, "at": 1715205408.8865979}
+{"obj": {"type": "AssignFloat", "path": ["training", "model", "optimizer_config", "beta_2"], "value": 0.999}, "version": 33, "at": 1715205408.886687}
+{"obj": {"type": "AssignFloat", "path": ["training", "model", "optimizer_config", "epsilon"], "value": 1e-07}, "version": 34, "at": 1715205408.886774}
+{"obj": {"type": "AssignBool", "path": ["training", "model", "optimizer_config", "amsgrad"], "value": false}, "version": 35, "at": 1715205408.8868659}
+{"obj": {"type": "AssignInt", "path": ["training", "fit_params", "verbose"], "value": 1}, "version": 36, "at": 1715205408.8870158}
+{"obj": {"type": "AssignInt", "path": ["training", "fit_params", "epochs"], "value": 50}, "version": 37, "at": 1715205408.887106}
+{"obj": {"type": "AssignInt", "path": ["training", "fit_params", "steps"], "value": 202}, "version": 38, "at": 1715205408.8871932}
+{"obj": {"type": "LogFloats", "path": ["training", "model", "learning_rate"], "values": [{"value": 0.0010000000474974513, "step": null, "ts": 1715205408.904753}]}, "version": 39, "at": 1715205408.904824}
