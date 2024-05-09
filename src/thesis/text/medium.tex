@@ -1,12 +1,19 @@
 \chapter{Obsah príloh}
 % Concents of the attachment
 
-	\dirtree{%
-		.1 readme.txt\DTcomment{stručný popis obsahu média}.
-		.1 exe\DTcomment{adresár so spustiteľnou formou implementácie}.
+  	\dirtree{%
+        .1 data                     \DTcomment{dáta získané v riadenom experimente}.
+        .2 ID                       \DTcomment{dáta pre účastníka s identifikátorom ID}.
+        .3 labels                   \DTcomment{anotované dáta}.
+        .1 LICENSE                  \DTcomment{GNU GPL 3.0 licencia}.
+		.1 README.md                \DTcomment{stručný popis obsahu média}.
 		.1 src.
-		.2 impl\DTcomment{zdrojové kódy implementácie}.
-		.2 thesis\DTcomment{zdrojová forma práce vo formáte \LaTeX{}}.
-		.1 text\DTcomment{text práce}.
-		.2 thesis.pdf\DTcomment{text práce vo formáte PDF}.
+        .2 data\_labeler            \DTcomment{zdrojové kódy grafického rozhrania na anotáciu dát}.
+		.2 impl                     \DTcomment{zdrojové kódy implementácie vo formáte Jupyter notebook}.
+        .3 models                   \DTcomment{výsledné natrénované modely}.
+		.2 thesis                   \DTcomment{zdrojová forma práce vo formáte \LaTeX{}}.
+		.1 text                     \DTcomment{text práce}.
+        .2 dotazník.pdf             \DTcomment{dotazník k experimentu vo formáte PDF}.
+        .2 informovaný\_súhlas.pdf  \DTcomment{informovaný súhlas k experimentu vo formáte PDF}.
+		.2 thesis.pdf               \DTcomment{text práce vo formáte PDF}.
 	}
